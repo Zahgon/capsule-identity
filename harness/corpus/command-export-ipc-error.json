@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\"}"
+    }
+  ],
+  "ipcErrors": {
+    "agent.v1.response": "rate-limited"
+  }
+}

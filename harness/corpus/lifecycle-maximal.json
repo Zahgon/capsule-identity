@@ -1,0 +1,38 @@
+{
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+  },
+  "fs": {
+    "home://.config/spark.toml": "callsign = \"OnDisk\"\n"
+  },
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep/end///\",\"session_id\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}"
+    },
+    {
+      "action": "tool_describe",
+      "payload": "{}"
+    },
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\",\"session_id\":\"s\"}"
+    },
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-import\",\"session_id\":\"s\"}"
+    },
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"class\":\"🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\"}}"
+    },
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    },
+    {
+      "action": "bogus",
+      "payload": "{}"
+    }
+  ]
+}

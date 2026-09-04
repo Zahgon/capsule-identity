@@ -4,92 +4,82 @@ on:
   push:
     branches: [main]
     paths:
-      - '**.rs'
-      - '**/Cargo.toml'
-      - '**/Cargo.lock'
+      - '**.js'
+      - '**.mjs'
+      - 'package.json'
+      - 'Capsule.toml'
       - '.github/workflows/**'
   pull_request:
     branches: [main]
     paths:
-      - '**.rs'
-      - '**/Cargo.toml'
-      - '**/Cargo.lock'
+      - '**.js'
+      - '**.mjs'
+      - 'package.json'
+      - 'Capsule.toml'
       - '.github/workflows/**'
-
-env:
-  CARGO_TERM_COLOR: always
+  workflow_dispatch:
 
 jobs:
-  check:
-    name: Check
+  # Stands in for `cargo fmt --all -- --check` and `cargo clippy -- -D warnings`.
+  # `scripts/lint.js` covers both: every finding is an error and any finding
+  # fails the run. `npm run fmt`, `fmt:check` and `lint` are aliases for it.
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
         with:
-          toolchain: "1.94"
-          targets: wasm32-unknown-unknown
+          node-version: '22'
 
-      - uses: Swatinem/rust-cache@v2
+      # No lockfile: `package.json` declares zero runtime dependencies, so this
+      # is a no-op that exists only to materialise `node_modules/.bin`.
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
-      - name: Run cargo check
-        run: cargo check --locked --target wasm32-unknown-unknown
+      - name: Run lint
+        run: npm run lint
 
-  fmt:
-    name: Format
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: "1.94"
-          components: rustfmt
-
-      - name: Run cargo fmt
-        run: cargo fmt --all -- --check
-
-  clippy:
-    name: Clippy
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: "1.94"
-          components: clippy
-          targets: wasm32-unknown-unknown
-
-      - uses: Swatinem/rust-cache@v2
-
-      - name: Run clippy
-        run: cargo clippy --locked --target wasm32-unknown-unknown -- -D warnings
-
+  # Stands in for `cargo check` / `cargo build --target wasm32-unknown-unknown`.
+  # JavaScript has no compile step, so `scripts/build.js` asserts the equivalent
+  # guarantee: every module parses, every module actually loads, and the
+  # manifest still points at an entry point that exists.
   build:
-    name: Build WASM
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
         with:
-          toolchain: "1.94"
-          targets: wasm32-unknown-unknown
+          node-version: '22'
 
-      - uses: Swatinem/rust-cache@v2
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
-      - name: Build release WASM
-        run: cargo build --locked --release --target wasm32-unknown-unknown
+      - name: Run build
+        run: npm run build
 
-      - name: Upload WASM artifact
-        uses: actions/upload-artifact@v4
+  # The Rust workflow had no test job. `npm test` is the stated acceptance
+  # criterion for this package, so it is gated here across the supported range
+  # declared by `engines.node` (>=20).
+  test:
+    name: Test (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22', '24']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
         with:
-          name: capsule-wasm
-          path: target/wasm32-unknown-unknown/release/*.wasm
-          if-no-files-found: error
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run test suite
+        run: npm test

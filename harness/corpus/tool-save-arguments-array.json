@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":[1,2]}"
+    }
+  ]
+}

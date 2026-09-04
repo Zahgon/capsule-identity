@@ -1,0 +1,11 @@
+{
+  "fs": {
+    "home://.config/spark.toml": "callsign = \"日\\α 　\""
+  },
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ]
+}

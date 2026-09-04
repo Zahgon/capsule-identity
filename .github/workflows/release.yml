@@ -8,9 +8,6 @@ on:
 permissions:
   contents: write
 
-env:
-  CARGO_TERM_COLOR: always
-
 jobs:
   release:
     name: Build and Release
@@ -18,34 +15,43 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-node@v4
         with:
-          targets: wasm32-unknown-unknown
+          node-version: '22'
 
-      - uses: Swatinem/rust-cache@v2
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
 
-      # Componentize with astrid-build (from the astrid release) rather than
-      # publishing a raw `cargo build` wasm. A raw core module is NOT installable
-      # — `astrid capsule install` expects a `.capsule` archive (wasm component +
-      # manifest + bundled WIT). Publishing raw wasm forced install into a
-      # clone-and-build fallback that needs a Rust toolchain, so binary-only
-      # (Homebrew) installs failed. The astrid repo is public, so the capsule's
-      # GITHUB_TOKEN can read its release assets.
-      - name: Fetch astrid-build from the astrid release
-        env:
-          GH_TOKEN: ${{ github.token }}
+      # Gate the release on the same checks CI runs, so a tag can never ship
+      # something `main` would have rejected.
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      # The Rust build published a componentized `.capsule` archive because a
+      # raw wasm core module was not installable. That constraint is gone: the
+      # component is now `type = "executable"` in Capsule.toml, pointing at
+      # `bin/capsule.js`, so there is nothing to componentize.
+      #
+      # `npm pack` honours the `files` list in package.json, so the tarball
+      # carries src/, bin/, Capsule.toml, the README and both licences — a
+      # complete, self-contained capsule with zero runtime dependencies.
+      #
+      # The package is `private: true`, so it is deliberately not pushed to a
+      # registry; the tarball is attached to the GitHub Release instead.
+      # `--pack-destination` does not create the directory, so make it first.
+      - name: Pack the capsule
         run: |
-          gh release download --repo unicity-astrid/astrid \
-            --pattern 'astrid-*-x86_64-unknown-linux-gnu.tar.gz' --dir /tmp/astrid-cli
-          tar xzf /tmp/astrid-cli/*.tar.gz -C /tmp/astrid-cli
-          echo "$(dirname "$(find /tmp/astrid-cli -name astrid-build -type f | head -1)")" >> "$GITHUB_PATH"
-
-      - name: Build .capsule (componentized, install-ready)
-        run: astrid-build . --output dist
+          mkdir -p dist
+          npm pack --pack-destination dist
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/*.capsule
+          files: dist/*.tgz
           generate_release_notes: true

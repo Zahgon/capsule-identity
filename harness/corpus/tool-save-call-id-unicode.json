@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-🚀-日本\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Zed\"}}"
+    }
+  ]
+}

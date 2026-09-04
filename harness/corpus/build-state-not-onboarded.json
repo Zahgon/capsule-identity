@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":false}"
+  }
+}

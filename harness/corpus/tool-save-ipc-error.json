@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Zed\"}}"
+    }
+  ],
+  "ipcErrors": {
+    "tool.v1.execute.save_identity.result": "closed"
+  }
+}

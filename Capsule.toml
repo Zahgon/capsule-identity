@@ -7,7 +7,7 @@ astrid-version = ">=0.1.0"
 
 [[component]]
 id = "identity-builder"
-file = "astrid_capsule_identity.wasm"
+file = "bin/capsule.js"
 type = "executable"
 capabilities = { fs_read = ["home://"], fs_write = ["home://"] }
 

@@ -1,0 +1,4829 @@
+{
+  "build-empty-workspace": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: \\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-first-boot": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /tmp/workspace\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-fs-read-denied": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\n"
+        }
+      }
+    }
+  },
+  "build-fs-read-unknown-detail": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-ipc-error": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::CapabilityDenied"
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}",
+            "failed": true
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-ipc-unknown-detail": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::Unknown(\"bus down\")"
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}",
+            "failed": true
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-kv-get-error": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to load state: Host function call failed: ErrorCode::Quota"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-kv-get-unknown-detail": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to load state: Host function call failed: ErrorCode::Unknown(\"kv offline\")"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-kv-set-error": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to save state: Host function call failed: ErrorCode::TooLarge"
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-array": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid length 0, expected struct BuildRequest with 2 elements at line 1 column 2"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-deep-nesting": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"s\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-payload-duplicate-field": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: duplicate field `workspace_root` at line 1 column 39"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-empty": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: EOF while parsing a value at line 1 column 0"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-escape-sequences": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /a\\tb\\\\c\\\"dé\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-payload-float-1e15": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1000000000000000.0`, expected a string at line 1 column 22"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-1e16": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1e+16`, expected a string at line 1 column 22"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-1e21": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1e+21`, expected a string at line 1 column 22"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-approx-frac": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `4.4100819999999996e-20`, expected a string at line 1 column 30"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-approx-large": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `5.9999999999999995e+228`, expected a string at line 1 column 23"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-approx-mixed": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `2.6747000000000003e-19`, expected a string at line 1 column 28"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-approx-neg": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `-1.0000000000000001e-268`, expected a string at line 1 column 25"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-approx-small": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `4.9999999999999996e-182`, expected a string at line 1 column 24"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-denormal": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `2.5e-323`, expected a string at line 1 column 26"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-integral": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1500.0`, expected a string at line 1 column 24"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-negzero": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `-0.0`, expected a string at line 1 column 22"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-small-decimal": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `0.00001`, expected a string at line 1 column 25"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-tiny": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1e-6`, expected a string at line 1 column 22"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float-zero": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `0.0`, expected a string at line 1 column 21"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-float": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `3.5`, expected a string at line 1 column 21"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-i64-underflow": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `-9.223372036854776e+18`, expected a string at line 1 column 38"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-int-huge-overflow": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: number out of range at line 1 column 418"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-int-long-digits": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1e+26`, expected a string at line 1 column 44"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-invalid-utf8": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid unicode code point at line 1 column 4"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-lone-minus": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: EOF while parsing a value at line 1 column 1"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-lone-surrogate": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: unexpected end of hex escape at line 1 column 27"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-negative-zero": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `-0.0`, expected a string at line 1 column 20"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-not-json": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: expected value at line 1 column 1"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-null": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: null, expected struct BuildRequest at line 1 column 4"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-number-out-of-range": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: number out of range at line 1 column 23"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-object-empty": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: missing field `workspace_root` at line 1 column 2"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-padded": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-payload-seq-exact": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"sid\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-payload-seq-one": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-payload-seq-surplus": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: trailing characters at line 1 column 13"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-session-id-float": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `2.5`, expected a string at line 1 column 40"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-session-id-negzero": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `-0.0`, expected a string at line 1 column 39"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-session-wrong-type": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: integer `7`, expected a string at line 1 column 38"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-trailing-chars": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: trailing characters at line 1 column 26"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-trailing-comma": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: trailing comma at line 1 column 25"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-u64-max": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: integer `18446744073709551615`, expected a string at line 1 column 38"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-u64-overflow": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: floating point `1.8446744073709552e+19`, expected a string at line 1 column 38"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-payload-wrong-type": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: invalid type: integer `5`, expected a string at line 1 column 19"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "build-relative-and-dotted": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: ./a/../b/.\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-root-only-slashes": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: \\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-session-id-null": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /tmp/workspace\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-empty-string": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-garbage": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-not-onboarded": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-onboarded-minimal": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Q.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Q\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-onboarded": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra, a precise concierge agent.\\n\\n# Personality\\nCalm, direct, and context aware.\\n\\n# Communication Style\\nUse short answers unless detail is needed.\\n\\n# Core Directives\\nPreserve user boundaries.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-partial-json": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-state-wrong-types": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-trailing-slashes": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /tmp/workspace\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-unicode-astral": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws/🚀🇯🇵/𝕬\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"🙂\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-unicode-combining-state": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Å, Å.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Å\",\"class\":\"Å\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-unicode-nfc-nfd": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /café\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /café\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-unicode-scripts": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ワークスペース/مساحة/Ω\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"セッション\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-unknown-fields": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-windows-style-path": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: C:\\\\Users\\\\dev\\\\ws\\\\\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "build-with-session-id": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /tmp/workspace\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"sess-42\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-array-payload": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-case-sensitive": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-empty-text": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-export-configured": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s1\",\"text\":\"Identity exported to home://.config/spark.toml (185 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\nclass = \"a precise concierge agent\"\naura = \"Calm, direct, and context aware.\"\nsignal = \"Use short answers unless detail is needed.\"\ncore = \"Preserve user boundaries.\"\n"
+        }
+      }
+    }
+  },
+  "command-export-control-chars": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (81 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"a\\u0007b\",\"class\":\"\\u001f\",\"aura\":\"\",\"signal\":\"\\b\",\"core\":\"\\f\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"a\\u0007b\"\nclass = \"\\u001F\"\naura = \"\\u007F\"\nsignal = \"\\b\"\ncore = \"\\f\"\n"
+        }
+      }
+    }
+  },
+  "command-export-default": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s1\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-export-empty-values": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (57 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-export-escaping": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (172 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"a \\\"quoted\\\" name\",\"class\":\"it's got 'single' quotes\",\"aura\":\"line1\\nline2\\ttab\",\"signal\":\"back\\\\slash and \\r carriage\",\"core\":\"triple ''' and \\\"\\\"\\\" quotes\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = 'a \"quoted\" name'\nclass = \"it's got 'single' quotes\"\naura = \"\"\"\nline1\nline2\\ttab\"\"\"\nsignal = \"back\\\\slash and \\r carriage\"\ncore = \"triple ''' and \\\"\\\"\\\" quotes\"\n"
+        }
+      }
+    }
+  },
+  "command-export-fs-error": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::Quota"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "command-export-ipc-error": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::RateLimited"
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}",
+            "failed": true
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-export-unicode": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (104 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"日本語 🚀\",\"class\":\"مساحة العمل\",\"aura\":\"café\",\"signal\":\"𝕬\",\"core\":\"Ω\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"日本語 🚀\"\nclass = \"مساحة العمل\"\naura = \"café\"\nsignal = \"𝕬\"\ncore = \"Ω\"\n"
+        }
+      }
+    }
+  },
+  "command-import-denied": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::CapabilityDenied"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "command-import-empty-file": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity imported from home://.config/spark.toml (callsign: )\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": ""
+        }
+      }
+    }
+  },
+  "command-import-invalid-utf8": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "API logic error: invalid utf-8 sequence of 1 bytes from index 2"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {
+        "home://.config/spark.toml": {
+          "b64": "YWL/Yw=="
+        }
+      }
+    }
+  },
+  "command-import-malformed": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity imported from home://.config/spark.toml (callsign: Astrid)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse spark.toml, using defaults: TOML parse error at line 1, column 8\n  |\n1 | garbage\n  |        ^\nexpected `.`, `=`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "garbage"
+        }
+      }
+    }
+  },
+  "command-import-missing-file": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "Host function call failed: ErrorCode::NotFound"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "command-import-ok": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s2\",\"text\":\"Identity imported from home://.config/spark.toml (callsign: Imported)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Imported\",\"class\":\"an imported agent\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Imported\"\nclass = \"an imported agent\"\n"
+        }
+      }
+    }
+  },
+  "command-kv-set-error": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "failed to save state: Host function call failed: ErrorCode::TooLarge"
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-missing-text": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-null-text": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-numeric-text": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-payload-empty": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: EOF while parsing a value at line 1 column 0"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "command-payload-not-json": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse arguments: expected ident at line 1 column 2"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "command-session-id-not-string": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-session-id-unicode": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"セッション🚀\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-string-payload": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-unknown-text": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-whitespace-ascii": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-whitespace-bom": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {}
+    }
+  },
+  "command-whitespace-nel": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "command-whitespace-unicode": {
+    "calls": [
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (88 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Astrid\"\nclass = \"a secure coding assistant\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "describe-empty-payload": {
+    "calls": [
+      {
+        "action": "tool_describe",
+        "result": {
+          "action": "continue",
+          "data": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.response.describe.self",
+            "payload": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "describe-ipc-error": {
+    "calls": [
+      {
+        "action": "tool_describe",
+        "result": {
+          "action": "continue",
+          "data": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.response.describe.self",
+            "payload": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}",
+            "failed": true
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "tool_describe: failed to publish descriptor, tools absent from describe fan-out: HostError(\"ErrorCode::Unknown(\\\"bus down\\\")\")"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "describe": {
+    "calls": [
+      {
+        "action": "tool_describe",
+        "result": {
+          "action": "continue",
+          "data": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.response.describe.self",
+            "payload": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "lifecycle-error-then-recover": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: integer `9`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Recovered\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Recovered.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Recovered\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Recovered\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "lifecycle-kv-reset": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Lyra\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"default\",\"text\":\"Identity exported to home://.config/spark.toml (185 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra, a precise concierge agent.\\n\\n# Personality\\nCalm, direct, and context aware.\\n\\n# Communication Style\\nUse short answers unless detail is needed.\\n\\n# Core Directives\\nPreserve user boundaries.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\nclass = \"a precise concierge agent\"\naura = \"Calm, direct, and context aware.\"\nsignal = \"Use short answers unless detail is needed.\"\ncore = \"Preserve user boundaries.\"\n"
+        }
+      }
+    }
+  },
+  "lifecycle-maximal": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra, a precise concierge agent.\\n\\n# Personality\\nCalm, direct, and context aware.\\n\\n# Communication Style\\nUse short answers unless detail is needed.\\n\\n# Core Directives\\nPreserve user boundaries.\\n\\n# Environment\\n- Current working directory: /very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep//very/deep/end\\n- Platform: astrid-os\",\"session_id\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "tool_describe",
+        "result": {
+          "action": "continue",
+          "data": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.response.describe.self",
+            "payload": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s\",\"text\":\"Identity exported to home://.config/spark.toml (185 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s\",\"text\":\"Identity imported from home://.config/spark.toml (callsign: Lyra)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "bogus",
+        "result": {
+          "action": "deny",
+          "data": "unknown hook action: bogus"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"class\":\"🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\"\nclass = \"🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "lifecycle-onboarding": {
+    "calls": [
+      {
+        "action": "tool_describe",
+        "result": {
+          "action": "continue",
+          "data": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.response.describe.self",
+            "payload": "{\"description\":\"\",\"tools\":[{\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"input_schema\":{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"description\":\"Save the agent's identity. Called by the LLM after onboarding to\\npersist the chosen callsign, personality, and style. Writes both\\nKV state (for immediate use) and spark.toml (for persistence\\nacross KV resets).\",\"mutable\":false,\"properties\":{\"aura\":{\"default\":\"\",\"description\":\"Personality traits.\",\"type\":\"string\"},\"callsign\":{\"default\":\"\",\"description\":\"Agent name/identifier.\",\"type\":\"string\"},\"class\":{\"default\":\"\",\"description\":\"Agent role description.\",\"type\":\"string\"},\"core\":{\"default\":\"\",\"description\":\"Core directives and constraints.\",\"type\":\"string\"},\"signal\":{\"default\":\"\",\"description\":\"Communication style preferences.\",\"type\":\"string\"}},\"title\":\"SparkConfig\",\"type\":\"object\"},\"name\":\"save_identity\"}]}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\",\"session_id\":\"s1\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Lyra\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra, a precise concierge agent.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\",\"session_id\":\"s2\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s3\",\"text\":\"Identity exported to home://.config/spark.toml (86 bytes)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      },
+      {
+        "action": "handle_command",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "agent.v1.response",
+            "payload": "{\"is_final\":true,\"session_id\":\"s4\",\"text\":\"Identity imported from home://.config/spark.toml (callsign: Lyra)\",\"type\":\"agent_response\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\nclass = \"a precise concierge agent\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-already-onboarded": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Prior.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Prior\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"FromDisk\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-bom-crlf": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Zed, ops.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"ops\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "﻿callsign = \"Zed\"\r\nclass = \"ops\"\r\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-comment-crlf": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Zed.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "# note\r\ncallsign = \"Zed\"\r\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-comment-only": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "# nothing here\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-dotted-key": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "a.b = \"x\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-empty-callsign": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\nclass = \"ignored\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-empty-file": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": ""
+        }
+      }
+    }
+  },
+  "spark-autodetect-leading-tab": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "\tcallsign = \"Lyra\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-literal-astral": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are 🚀🇯🇵, /🇯🇵%}}.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"🚀🇯🇵\",\"class\":\"/🇯🇵%}}\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = '🚀🇯🇵'\nclass = '/🇯🇵%}}'"
+        }
+      }
+    }
+  },
+  "spark-autodetect-literal-string": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra.\\n\\n# Core Directives\\nback\\\\slash\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"back\\\\slash\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = 'Lyra'\ncore = 'back\\slash'\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-multiline": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra.\\n\\n# Personality\\nline1\\nline2\\ttab\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"\",\"aura\":\"line1\\nline2\\ttab\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\"\nLyra\"\"\"\naura = \"\"\"\nline1\nline2\ttab\"\"\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-unknown-key": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Zed.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "nickname = \"x\"\ncallsign = \"Zed\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-unknown-table": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "[spark]\ncallsign = \"Zed\"\n"
+        }
+      }
+    }
+  },
+  "spark-autodetect-valid": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"You are Lyra, a precise concierge agent.\\n\\n# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\nclass = \"a precise concierge agent\"\n"
+        }
+      }
+    }
+  },
+  "spark-error-array-table-header": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 4\n  |\n1 | [[a{]\n  |    ^\ninvalid table header\nexpected `.`, `]]`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "[[a{]"
+        }
+      }
+    }
+  },
+  "spark-error-array": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | callsign = [\"a\"]\n  |            ^^^^^\ninvalid type: sequence, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = [\"a\"]"
+        }
+      }
+    }
+  },
+  "spark-error-bad-escape": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 16\n  |\n1 | callsign = \"a\\qb\"\n  |                ^\ninvalid escape sequence\nexpected `b`, `f`, `n`, `r`, `t`, `u`, `U`, `\\`, `\"`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"a\\qb\""
+        }
+      }
+    }
+  },
+  "spark-error-bad-unicode-escape": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 15\n  |\n1 | callsign = \"\\uZZZZ\"\n  |               ^\ninvalid unicode 4-digit hex code\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\\uZZZZ\""
+        }
+      }
+    }
+  },
+  "spark-error-bare-cr-line": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 2, column 1\n  |\n2 | \r\n  | ^\n\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\"\n\r"
+        }
+      }
+    }
+  },
+  "spark-error-bom-prefixed-bad": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 10\n  |\n1 | ﻿' = \"#%\"\n  |          ^\ninvalid literal string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "﻿' = \"#%\"\ncore = \"x\""
+        }
+      }
+    }
+  },
+  "spark-error-boolean": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | callsign = true\n  |            ^^^^\ninvalid type: boolean `true`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = true"
+        }
+      }
+    }
+  },
+  "spark-error-comment-bare-cr": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 3\n  |\n1 | # \ra\n  |   ^\n\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "# \ra"
+        }
+      }
+    }
+  },
+  "spark-error-control-char": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 14\n  |\n1 | callsign = \"a\u0000b\"\n  |              ^\ninvalid basic string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"a\u0000b\""
+        }
+      }
+    }
+  },
+  "spark-error-datetime": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 8\n  |\n1 | core = 1979-05-27\n  |        ^^^^^^^^^^\ninvalid type: map, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "core = 1979-05-27"
+        }
+      }
+    }
+  },
+  "spark-error-duplicate-key": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 2, column 1\n  |\n2 | callsign = \"b\"\n  | ^\nduplicate key `callsign` in document root\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"a\"\ncallsign = \"b\"\n"
+        }
+      }
+    }
+  },
+  "spark-error-escape-nonascii": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 14\n  |\n1 | callsign = \"\\日\"\n  |              ^^^\ninvalid escape sequence\nexpected `b`, `f`, `n`, `r`, `t`, `u`, `U`, `\\`, `\"`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\\日\""
+        }
+      }
+    }
+  },
+  "spark-error-escape-two-byte": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 17\n  |\n1 | callsign = \"日\\α 　\"\n  |                 ^^\ninvalid escape sequence\nexpected `b`, `f`, `n`, `r`, `t`, `u`, `U`, `\\`, `\"`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"日\\α 　\""
+        }
+      }
+    }
+  },
+  "spark-error-float": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 8\n  |\n1 | aura = 1.5\n  |        ^^^\ninvalid type: floating point `1.5`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "aura = 1.5"
+        }
+      }
+    }
+  },
+  "spark-error-garbage": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 8\n  |\n1 | garbage\n  |        ^\nexpected `.`, `=`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "garbage"
+        }
+      }
+    }
+  },
+  "spark-error-inline-table": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | callsign = { a = 1 }\n  |            ^^^^^^^^^\ninvalid type: map, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = { a = 1 }"
+        }
+      }
+    }
+  },
+  "spark-error-integer": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | callsign = 42\n  |            ^^\ninvalid type: integer `42`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = 42"
+        }
+      }
+    }
+  },
+  "spark-error-invalid-key": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 1\n  |\n1 | = \"x\"\n  | ^\ninvalid key\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "= \"x\""
+        }
+      }
+    }
+  },
+  "spark-error-invalid-string-at": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | callsign = @\n  |            ^\ninvalid string\nexpected `\"`, `'`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = @\n"
+        }
+      }
+    }
+  },
+  "spark-error-invalid-string-line2": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 2, column 12\n  |\n2 | callsign = @\n  |            ^\ninvalid string\nexpected `\"`, `'`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "x = 1\ncallsign = @\n"
+        }
+      }
+    }
+  },
+  "spark-error-literal-control-after-cjk": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 12\n  |\n1 | class = '日[\u001f'\n  |            ^\ninvalid literal string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "class = '日[\u001f'"
+        }
+      }
+    }
+  },
+  "spark-error-literal-control": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 10\n  |\n1 | class = '\u001f'\n  |          ^\ninvalid literal string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "class = '\u001f'"
+        }
+      }
+    }
+  },
+  "spark-error-ml-basic-bare-cr": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 16\n  |\n1 | callsign = \"\"\"a\rb\"\"\"\n  |                ^\ninvalid multiline basic string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\"a\rb\"\"\""
+        }
+      }
+    }
+  },
+  "spark-error-radix-integer": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 10\n  |\n1 | signal = 0x1f\n  |          ^^^^\ninvalid type: integer `31`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "signal = 0x1f"
+        }
+      }
+    }
+  },
+  "spark-error-second-line": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 2, column 9\n  |\n2 | class = 7\n  |         ^\ninvalid type: integer `7`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"ok\"\nclass = 7\n"
+        }
+      }
+    }
+  },
+  "spark-error-special-float": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 10\n  |\n1 | signal = inf\n  |          ^^^\ninvalid type: floating point `inf`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "signal = inf"
+        }
+      }
+    }
+  },
+  "spark-error-tenth-line": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 10, column 12\n   |\n10 | callsign = 42\n   |            ^^\ninvalid type: integer `42`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "# pad\n# pad\n# pad\n# pad\n# pad\n# pad\n# pad\n# pad\n# pad\ncallsign = 42\n"
+        }
+      }
+    }
+  },
+  "spark-error-trailing-junk": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 18\n  |\n1 | callsign = \"Zed\" junk\n  |                  ^\nexpected newline, `#`\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\" junk"
+        }
+      }
+    }
+  },
+  "spark-error-unclosed-string": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 1, column 21\n  |\n1 | callsign = \"unclosed\n  |                     ^\ninvalid basic string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"unclosed"
+        }
+      }
+    }
+  },
+  "spark-error-unicode-column": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": [
+          {
+            "level": "warn",
+            "message": "Failed to parse home://.config/spark.toml during auto-detect: TOML parse error at line 2, column 9\n  |\n2 | class = 42\n  |         ^^\ninvalid type: integer `42`, expected a string\n"
+          }
+        ]
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "aura = \"日本語\"\nclass = 42\n"
+        }
+      }
+    }
+  },
+  "spark-invalid-utf8": {
+    "calls": [
+      {
+        "action": "handle_build_request",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "spark.v1.response.ready",
+            "payload": "{\"prompt\":\"# Environment\\n- Current working directory: /ws\\n- Platform: astrid-os\\n\\n# Important: Identity Setup Required\\n\\nThis is your first session. You have no name or identity yet. Introduce\\nyourself briefly, then ask the user one open question about how they'd like\\nto work together. Let the conversation flow naturally. From it, derive a name,\\npersonality, and focus that feel right — then surface what you came up with\\nand let the user react. Adjust from there. Once you've landed on something,\\ncall `save_identity` to save it. Always call it — if the user wants to skip,\\nderive something fitting from the exchange and confirm it casually before saving.\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Astrid\",\"class\":\"a secure coding assistant\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":false}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "b64": "YWL/Yw=="
+        }
+      }
+    }
+  },
+  "tool-save-all-fields": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Lyra\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Lyra\"\nclass = \"a precise concierge agent\"\naura = \"Calm, direct, and context aware.\"\nsignal = \"Use short answers unless detail is needed.\"\ncore = \"Preserve user boundaries.\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-arguments-array": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: integer `1`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-bigint-field": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"c1\",\"result\":{\"call_id\":\"c1\",\"content\":\"failed to parse tool arguments: invalid type: floating point `1.8446744073709552e+19`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-float-field": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"c1\",\"result\":{\"call_id\":\"c1\",\"content\":\"failed to parse tool arguments: invalid type: floating point `3.5`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-multi-wrong": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: boolean `true`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-null": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: null, expected struct SparkConfig\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-seq5": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"c1\",\"result\":{\"call_id\":\"c1\",\"content\":\"{\\\"callsign\\\":\\\"a\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"a\",\"class\":\"b\",\"aura\":\"c\",\"signal\":\"d\",\"core\":\"e\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"a\"\nclass = \"b\"\naura = \"c\"\nsignal = \"d\"\ncore = \"e\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-arguments-seq6": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"c1\",\"result\":{\"call_id\":\"c1\",\"content\":\"failed to parse tool arguments: invalid length 6, expected fewer elements in array\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-seq7": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"c1\",\"result\":{\"call_id\":\"c1\",\"content\":\"failed to parse tool arguments: invalid length 7, expected fewer elements in array\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-string": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: string \\\"x\\\", expected struct SparkConfig\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-arguments-wrong-field-type": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to parse tool arguments: invalid type: integer `9`, expected a string\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-call-id-unicode": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-🚀-日本\",\"result\":{\"call_id\":\"call-🚀-日本\",\"content\":\"{\\\"callsign\\\":\\\"Zed\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-empty-arguments": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-escaping": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"a\\\\\\\"b\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"a\\\"b\",\"class\":\"c'd\",\"aura\":\"e\\\\f\",\"signal\":\"g\\nh\",\"core\":\"i\\tj\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = 'a\"b'\nclass = \"c'd\"\naura = 'e\\f'\nsignal = \"\"\"\ng\nh\"\"\"\ncore = \"i\\tj\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-fs-write-error": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"Host function call failed: ErrorCode::Access\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-ipc-error": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Zed\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}",
+            "failed": true
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-kv-get-error": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to load state: Host function call failed: ErrorCode::InvalidKey\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-kv-set-error": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"failed to save state: Host function call failed: ErrorCode::Quota\",\"is_error\":true},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-missing-arguments": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse tool execute payload: missing field `arguments` at line 1 column 44"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-missing-call-id": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse tool execute payload: missing field `call_id` at line 1 column 44"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-missing-tool-name": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse tool execute payload: missing field `tool_name` at line 1 column 31"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-ok": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"Zed\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"Zed\",\"class\":\"an operator\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"Zed\"\nclass = \"an operator\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-payload-empty": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse tool execute payload: EOF while parsing a value at line 1 column 0"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-payload-not-json": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "deny",
+          "data": "failed to parse tool execute payload: expected ident at line 1 column 2"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "tool-save-unicode": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"日本語🚀\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"日本語🚀\",\"class\":\"café\",\"aura\":\"Ω\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"日本語🚀\"\nclass = \"café\"\naura = \"Ω\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "tool-save-unknown-fields": {
+    "calls": [
+      {
+        "action": "tool_execute_save_identity",
+        "result": {
+          "action": "continue",
+          "data": null
+        },
+        "publishes": [
+          {
+            "topic": "tool.v1.execute.save_identity.result",
+            "payload": "{\"call_id\":\"call-1\",\"result\":{\"call_id\":\"call-1\",\"content\":\"{\\\"callsign\\\":\\\"\\\",\\\"status\\\":\\\"ok\\\"}\",\"is_error\":false},\"type\":\"tool_execute_result\"}"
+          }
+        ],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {
+        "__state": {
+          "text": "{\"spark\":{\"callsign\":\"\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+        }
+      },
+      "files": {
+        "home://.config/spark.toml": {
+          "text": "callsign = \"\"\nclass = \"\"\naura = \"\"\nsignal = \"\"\ncore = \"\"\n"
+        }
+      }
+    }
+  },
+  "unknown-action-empty": {
+    "calls": [
+      {
+        "action": "",
+        "result": {
+          "action": "deny",
+          "data": "unknown hook action: "
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "unknown-action-unicode": {
+    "calls": [
+      {
+        "action": "日本語🚀",
+        "result": {
+          "action": "deny",
+          "data": "unknown hook action: 日本語🚀"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  },
+  "unknown-action": {
+    "calls": [
+      {
+        "action": "bogus_action",
+        "result": {
+          "action": "deny",
+          "data": "unknown hook action: bogus_action"
+        },
+        "publishes": [],
+        "logs": []
+      }
+    ],
+    "world": {
+      "kv": {},
+      "files": {}
+    }
+  }
+}

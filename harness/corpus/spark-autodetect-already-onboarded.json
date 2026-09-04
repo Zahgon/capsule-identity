@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"Prior\",\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+  },
+  "fs": {
+    "home://.config/spark.toml": "callsign = \"FromDisk\"\n"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ],
+  "fs": {
+    "home://.config/spark.toml": "[spark]\ncallsign = \"Zed\"\n"
+  }
+}

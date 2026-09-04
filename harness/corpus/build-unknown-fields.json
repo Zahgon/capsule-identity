@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\",\"bogus\":1,\"nested\":{\"a\":[1,2]}}"
+    }
+  ]
+}

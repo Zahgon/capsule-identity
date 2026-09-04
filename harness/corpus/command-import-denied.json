@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-import\"}"
+    }
+  ],
+  "fsErrors": {
+    "home://.config/spark.toml": {
+      "op": "read",
+      "code": "capability-denied"
+    }
+  }
+}

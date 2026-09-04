@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\"}"
+    }
+  ],
+  "fsErrors": {
+    "home://.config/spark.toml": {
+      "op": "write",
+      "code": "quota"
+    }
+  }
+}
