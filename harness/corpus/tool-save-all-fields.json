@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"}}"
+    }
+  ]
+}

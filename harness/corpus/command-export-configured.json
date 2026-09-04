@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\",\"session_id\":\"s1\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\",\"aura\":\"Calm, direct, and context aware.\",\"signal\":\"Use short answers unless detail is needed.\",\"core\":\"Preserve user boundaries.\"},\"onboarded\":true}"
+  }
+}

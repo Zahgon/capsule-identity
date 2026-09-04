@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"////\"}"
+    }
+  ]
+}

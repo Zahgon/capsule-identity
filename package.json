@@ -1,0 +1,38 @@
+{
+  "name": "astrid-capsule-identity",
+  "version": "0.2.0",
+  "description": "Context Builder Capsule for Astrid OS",
+  "license": "MIT OR Apache-2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./capsule": "./src/capsule.js",
+    "./sdk": "./src/sdk/index.js"
+  },
+  "bin": {
+    "astrid-capsule-identity": "bin/capsule.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "Capsule.toml",
+    "README.md",
+    "LICENSE-MIT",
+    "LICENSE-APACHE"
+  ],
+  "scripts": {
+    "build": "node --check src/index.js && node scripts/build.js",
+    "test": "node --test test/*.test.js",
+    "lint": "node scripts/lint.js",
+    "fmt": "node scripts/lint.js",
+    "fmt:check": "node scripts/lint.js",
+    "differential": "node harness/differential.mjs",
+    "start": "node bin/capsule.js"
+  },
+  "dependencies": {}
+}

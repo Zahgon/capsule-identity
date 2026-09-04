@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\" 　identity-export  \"}"
+    }
+  ]
+}

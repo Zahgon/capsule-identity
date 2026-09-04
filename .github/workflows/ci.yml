@@ -1,0 +1,85 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.js'
+      - '**.mjs'
+      - 'package.json'
+      - 'Capsule.toml'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [main]
+    paths:
+      - '**.js'
+      - '**.mjs'
+      - 'package.json'
+      - 'Capsule.toml'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+jobs:
+  # Stands in for `cargo fmt --all -- --check` and `cargo clippy -- -D warnings`.
+  # `scripts/lint.js` covers both: every finding is an error and any finding
+  # fails the run. `npm run fmt`, `fmt:check` and `lint` are aliases for it.
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # No lockfile: `package.json` declares zero runtime dependencies, so this
+      # is a no-op that exists only to materialise `node_modules/.bin`.
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run lint
+        run: npm run lint
+
+  # Stands in for `cargo check` / `cargo build --target wasm32-unknown-unknown`.
+  # JavaScript has no compile step, so `scripts/build.js` asserts the equivalent
+  # guarantee: every module parses, every module actually loads, and the
+  # manifest still points at an entry point that exists.
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run build
+        run: npm run build
+
+  # The Rust workflow had no test job. `npm test` is the stated acceptance
+  # criterion for this package, so it is gated here across the supported range
+  # declared by `engines.node` (>=20).
+  test:
+    name: Test (Node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: ['20', '22', '24']
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Run test suite
+        run: npm test

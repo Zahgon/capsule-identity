@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"a\\u0007b\",\"class\":\"\\u001f\",\"aura\":\"\",\"signal\":\"\\b\",\"core\":\"\\f\"},\"onboarded\":true}"
+  }
+}

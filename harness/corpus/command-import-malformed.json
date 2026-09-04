@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-import\"}"
+    }
+  ],
+  "fs": {
+    "home://.config/spark.toml": "garbage"
+  }
+}

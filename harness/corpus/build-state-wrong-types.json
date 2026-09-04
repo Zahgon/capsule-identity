@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":1,\"class\":\"\",\"aura\":\"\",\"signal\":\"\",\"core\":\"\"},\"onboarded\":true}"
+  }
+}

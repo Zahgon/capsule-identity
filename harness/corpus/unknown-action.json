@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "bogus_action",
+      "payload": "{}"
+    }
+  ]
+}

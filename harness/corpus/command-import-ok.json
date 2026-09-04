@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-import\",\"session_id\":\"s2\"}"
+    }
+  ],
+  "fs": {
+    "home://.config/spark.toml": "callsign = \"Imported\"\nclass = \"an imported agent\"\n"
+  }
+}

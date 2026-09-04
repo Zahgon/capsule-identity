@@ -1,0 +1,28 @@
+{
+  "calls": [
+    {
+      "action": "tool_describe",
+      "payload": "{}"
+    },
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\",\"session_id\":\"s1\"}"
+    },
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Lyra\",\"class\":\"a precise concierge agent\"}}"
+    },
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\",\"session_id\":\"s2\"}"
+    },
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\",\"session_id\":\"s3\"}"
+    },
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-import\",\"session_id\":\"s4\"}"
+    }
+  ]
+}

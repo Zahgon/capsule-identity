@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ],
+  "kvErrors": {
+    "__state": {
+      "op": "set",
+      "code": "too-large"
+    }
+  }
+}

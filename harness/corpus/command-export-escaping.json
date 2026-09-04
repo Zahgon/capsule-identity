@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"a \\\"quoted\\\" name\",\"class\":\"it's got 'single' quotes\",\"aura\":\"line1\\nline2\\ttab\",\"signal\":\"back\\\\slash and \\r carriage\",\"core\":\"triple ''' and \\\"\\\"\\\" quotes\"},\"onboarded\":true}"
+  }
+}

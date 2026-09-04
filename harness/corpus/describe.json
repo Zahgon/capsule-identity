@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "tool_describe",
+      "payload": "{}"
+    }
+  ]
+}

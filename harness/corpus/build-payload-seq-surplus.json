@@ -1,0 +1,8 @@
+{
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "[\"ws\",\"sid\",\"extra\"]"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":9}}"
+    },
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    },
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Recovered\"}}"
+    },
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ]
+}

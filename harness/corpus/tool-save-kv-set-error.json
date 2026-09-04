@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "tool_execute_save_identity",
+      "payload": "{\"call_id\":\"call-1\",\"tool_name\":\"save_identity\",\"arguments\":{\"callsign\":\"Zed\"}}"
+    }
+  ],
+  "kvErrors": {
+    "__state": {
+      "op": "set",
+      "code": "quota"
+    }
+  }
+}

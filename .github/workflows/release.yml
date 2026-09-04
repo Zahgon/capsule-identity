@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      # Gate the release on the same checks CI runs, so a tag can never ship
+      # something `main` would have rejected.
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+
+      - name: Test
+        run: npm test
+
+      # The Rust build published a componentized `.capsule` archive because a
+      # raw wasm core module was not installable. That constraint is gone: the
+      # component is now `type = "executable"` in Capsule.toml, pointing at
+      # `bin/capsule.js`, so there is nothing to componentize.
+      #
+      # `npm pack` honours the `files` list in package.json, so the tarball
+      # carries src/, bin/, Capsule.toml, the README and both licences — a
+      # complete, self-contained capsule with zero runtime dependencies.
+      #
+      # The package is `private: true`, so it is deliberately not pushed to a
+      # registry; the tarball is attached to the GitHub Release instead.
+      # `--pack-destination` does not create the directory, so make it first.
+      - name: Pack the capsule
+        run: |
+          mkdir -p dist
+          npm pack --pack-destination dist
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.tgz
+          generate_release_notes: true

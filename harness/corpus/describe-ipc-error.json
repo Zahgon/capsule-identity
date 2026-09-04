@@ -1,0 +1,14 @@
+{
+  "calls": [
+    {
+      "action": "tool_describe",
+      "payload": "{}"
+    }
+  ],
+  "ipcErrors": {
+    "tool.v1.response.describe.self": {
+      "code": "unknown",
+      "detail": "bus down"
+    }
+  }
+}

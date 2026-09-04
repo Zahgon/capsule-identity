@@ -1,0 +1,11 @@
+{
+  "fs": {
+    "home://.config/spark.toml": "class = '日[\u001f'"
+  },
+  "calls": [
+    {
+      "action": "handle_build_request",
+      "payload": "{\"workspace_root\":\"/ws\"}"
+    }
+  ]
+}

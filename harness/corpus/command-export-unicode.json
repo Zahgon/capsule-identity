@@ -1,0 +1,11 @@
+{
+  "calls": [
+    {
+      "action": "handle_command",
+      "payload": "{\"text\":\"identity-export\"}"
+    }
+  ],
+  "kv": {
+    "__state": "{\"spark\":{\"callsign\":\"日本語 🚀\",\"class\":\"مساحة العمل\",\"aura\":\"café\",\"signal\":\"𝕬\",\"core\":\"Ω\"},\"onboarded\":true}"
+  }
+}
